@@ -1,5 +1,22 @@
 
 .sidebar{
+
+  @media (max-width: $sm-width)  {
+    .side {
+      display: none;
+    }
+
+    .main-container {
+      min-width: 100% !important;
+      margin: 0px !important;
+      max-height: initial;
+    }
+  
+    .profil-card{
+      display: none !important;
+    }
+  }
+
   .container{
     background-color: white;
     margin: 0;
@@ -12,18 +29,62 @@
     height: 100vh;
     width: 19rem;
     background-color:  $light-back-main-color;
-    h1, h2, h3, h4, p {
+    h1, h2, h3, h4, p, li {
       color: white;
-
-      &:hover {
-        font-weight: bold;
-        cursor: pointer;
-      }
-;
     }
 
+    ul{
+      width: 80%;
+    }
+
+
+    .dropdown-items{
+      padding: 15px;
+      li{
+        padding: 0 20px;
+        border-left: 2px solid rgba(255, 255, 255, 0.35);
+        cursor: pointer;
+
+      }
+      li:hover{
+        font-weight: bold;
+      }
+    }
+  li{
+      width: 100%;
+    }
+
+   ul.main-items {
+    padding-left: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     .item:hover {
+       background-color: #5E5353;
+     }
+   }
+
+    .item {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      cursor: pointer;
+      padding: 22px 0px;
+    }
+
+    li {
+      list-style-type: none;
+
+      &.dropdown ul{
+        display: none;
+      }
+    }
+
+
     .spacer{
-      margin-top: 50px;
+      margin-top: 20px;
 
     }
 
@@ -31,20 +92,12 @@
       background-color: lighten(#5E5353, 10%) ;
     }
 
+
+
     .sidebar-block{
-      padding: 0.5px;
-      width: 80%;
-      align-items: center;
-      justify-content: center;
-      border-radius: 25px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #5E5353;
-      }
-
 
     }
   }
+
 
 }
